@@ -1,0 +1,126 @@
+*{
+	box-sizing: border-box;
+}
+.container{
+	width: 1170px;
+	margin: 0 auto;
+	text-align: center;
+}
+.breadcrumbs{
+	text-align: center;
+}
+.breadcrumbs{
+	display: inline-table;
+	list-style: none outside none;
+	padding-left: 0;
+	width: 100%;
+}
+.breadcrumbs li{
+	display: inline;
+}
+.breadcrumbs li a{
+	display: block;
+	float: left;
+	height: 70px;
+	background: #cbedee;
+	text-align: center;
+	position: relative;
+	margin: 0 5px 0 0;
+	font-size: 20px;
+	text-decoration: none;
+	width: 23.5%;
+	color: #81999b;
+	line-height: 3.5;
+}
+.breadcrumbs li a:after{
+	content: '';
+	border-top: 35px solid transparent;
+	border-bottom: 35px solid transparent;
+	border-left: 25px solid #cbedee;
+	position: absolute;
+	right: -24.9px;
+	top: 0;
+	z-index: 1;
+}
+.breadcrumbs li a:before{
+	content: '';
+	border-bottom: 35px solid transparent;
+	border-left: 25px solid white;
+	border-top: 35px solid transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.breadcrumbs li:first-child a:before{
+	display: none;
+}
+.breadcrumbs li:last-child a:after{
+	display: none;
+}
+.breadcrumbs li:first-child a{
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.breadcrumbs li:last-child a{
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-right: 0;
+}
+.breadcrumbs li a:hover {
+	background: none repeat scroll 0 0 #66c8c9;
+}
+.breadcrumbs li a:hover:after{
+	border-left-color: #66c8c9;
+}
+.breadcrumbs li a,
+.breadcrumbs li a:after{
+	transition: all 0.5s;
+}
+.breadcrumbs .active a{
+	background: #66c8c9;
+}
+@media (max-width: 992px){
+	.container{
+		width: 970px;
+	}
+	.breadcrumbs li a{
+		width: 23%;
+	}
+}
+@media (max-width: 768px){
+	.container{
+		width: 750px;
+	}
+	.breadcrumbs li a{
+		width: 22.5%;
+	}
+}
+@media (max-width: 667px){
+	.breadcrumbs li a{
+		float: none;
+		background-color: white;
+		text-align: left;
+		padding-left: 25px;
+		height: auto;
+		line-height: 1;
+		margin-bottom: 10px;
+		font-size: 24px;
+		font-weight: bold;
+		color: #66c8c9;
+		width: auto;
+	}
+	.breadcrumbs li a:after{
+		display: none;
+	}
+	.breadcrumbs li a:before{
+		display: none;
+	}
+	.breadcrumbs .active a{
+		background-color: white;
+		color:#81999b;
+	}
+	.breadcrumbs li a:hover{
+		background-color: white;
+		color: #81999b;
+	}
+}
